@@ -48,27 +48,32 @@ struct SimpleEntry: TimelineEntry {
 
 struct QuotesWidgetEntryView : View {
     var entry: SimpleEntry
+    @Environment (\.widgetFamily) var family
     
     var body: some View {
         ZStack {
-            if let data = entry.imageData, let uiImage = UIImage(data: data) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFill()
-            } else {
-                Color.black // fallback
+            if family != .accessoryRectangular {
+                if let data = entry.imageData, let uiImage = UIImage(data: data) {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFill()
+                } else {
+                    Color.black // fallback
+                }
             }
             
             VStack(spacing: 5) {
                 Text(entry.quote)
                     .foregroundColor(.white)
-                    .font(.system(size: 16, weight: .medium))
+                    .font(.system(size: family == .accessoryRectangular ? 14 : 16, weight: family == .accessoryRectangular ? .regular : .medium))
                     .padding(.horizontal)
                 
-                Text("- \(entry.author)")
-                    .foregroundColor(.white)
-                    .font(.system(size: 14, weight: .light))
-                    .italic()
+                if family != .accessoryRectangular {
+                    Text("- \(entry.author)")
+                        .foregroundColor(.white)
+                        .font(.system(size: 14, weight: .light))
+                        .italic()
+                }
             }
         }
     }
@@ -83,7 +88,7 @@ struct QuotesWidget: Widget {
         }
         .configurationDisplayName("Quote Widget")
         .description("Daily Motivational Quotes.")
-        .supportedFamilies([.systemSmall, .systemMedium])
+        .supportedFamilies([.systemSmall, .systemMedium, .systemLarge, .accessoryRectangular])
     }
 }
 

@@ -435,6 +435,7 @@
 				DEVELOPMENT_TEAM = B6225A755G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuotesApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MotiMate;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -466,6 +467,7 @@
 				DEVELOPMENT_TEAM = B6225A755G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuotesApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MotiMate;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -496,7 +498,7 @@
 				DEVELOPMENT_TEAM = B6225A755G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuotesWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = QuotesWidget;
+				INFOPLIST_KEY_CFBundleDisplayName = MotiMate;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -525,7 +527,7 @@
 				DEVELOPMENT_TEAM = B6225A755G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuotesWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = QuotesWidget;
+				INFOPLIST_KEY_CFBundleDisplayName = MotiMate;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
